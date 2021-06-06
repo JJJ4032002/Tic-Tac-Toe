@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #1e9d6a;
+}
+
+nav {
+  background: #195f45;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: relative;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.plyNam {
+  margin: 10em auto;
+  width: 500px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2em 0;
+}
+form {
+  background-color: #195f45;
+  margin: auto;
+  width: 90%;
+  padding: 2em 0;
+  text-align: center;
+  font-family: "Odibee Sans", monospace;
+  font-size: 1.7rem;
+  color: wheat;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.8);
+  border-radius: 0.3em;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.lbl {
+  margin: 0.5em 0;
+}
+.inp {
+  margin: 1em 0;
+  font-size: 1.2rem;
+  border-radius: 0.2em;
+}
+
+.btn {
+  padding: 0.5em 0.5em;
+  background: transparent;
+  font-size: 1.5rem;
+  font-family: "Odibee Sans", monospace;
+  border: 0.4em solid rgba(0, 0, 0, 0.5);
+  border-radius: 0.3em;
+}
+
+.btn:hover {
+  color: wheat;
+  border: 0.4em solid wheat;
+  border-radius: 0.3em;
+}
+
+nav h1 {
+  padding: 1em;
+  text-align: center;
+  font-size: 2.8rem;
+  font-family: "Odibee Sans", monospace;
+  color: wheat;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.336);
+}
+
+.grid-cont {
+  padding: 3.5em 0;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(3, 6em);
+  grid-template-rows: repeat(3, 6em);
+}
+
+.gam-layout {
+  border: 0.3em solid wheat;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 0.6em;
+  color: wheat;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.336);
+}
+
+.plyDisp {
+  padding: 0.4em;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.336);
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.7rem;
+  color: wheat;
+  font-family: "Odibee Sans", monospace;
+}
+.Result {
+  text-align: center;
+  font-size: 1.7rem;
+  font-size: "Odibee Sans", monospace;
+  color: wheat;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.336);
+}
+.reset {
+  text-align: center;
+  padding: 0.5em 0.5em;
+  background-color: transparent;
+  border: 0.3em solid rgba(0, 0, 0, 0.24);
+  font-family: "Odibee Sans", monospace;
+  font-size: 1.1rem;
+  color: wheat;
+}
+
+.avoid-point {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.reset:hover {
+  border: 0.3em solid wheat;
+}
+
+@media (max-width: 550px) {
+  form {
+    padding: 1em 0;
+    font-size: 1.5rem;
+  }
+  .plyNam {
+    width: 300px;
+  }
+  .inp {
+    margin: 1em 0;
+    font-size: 1rem;
+    border-radius: 0.2em;
+  }
+}
+
+@media (max-width: 300px) {
+  .plyNam {
+    width: 250px;
+  }
+}
