@@ -96,14 +96,15 @@ ArrToBeFilled.forEach(function(e){
       else{
         ele.stopPropagation();
       }
-
+     const Res = document.body.querySelector(".Result");
+      const reset = document.body.querySelector(".reset");
       if((ComparArr[0] == ComparArr[1] && ComparArr[0]== ComparArr[2]) || (ComparArr[2] == ComparArr[5] && ComparArr[2] == ComparArr[8]) || (ComparArr[6] == ComparArr[7] && ComparArr[6] == ComparArr[8]) || (ComparArr[0] == ComparArr[3] && ComparArr[0] == ComparArr[6]) || (ComparArr[1] == ComparArr[4] && ComparArr[1] == ComparArr[7]) || (ComparArr[3] == ComparArr[4] && ComparArr[3] == ComparArr[5]) || (ComparArr[0] == ComparArr[4] && ComparArr[0] == ComparArr[8]) || (ComparArr[2] == ComparArr[4] && ComparArr[2] == ComparArr[6])){
         
-         const Res = document.body.querySelector(".Result");
+         
          Res.textContent = `${oldVal} wins the game, click on the reset button to start again`;
           
          gridCont.classList.add("avoid-point")
-         const reset = document.body.querySelector(".reset");
+         
          
           reset.addEventListener("click",function(){
            ArrToBeFilled =   rst(gridCont,Res);
@@ -114,6 +115,30 @@ ArrToBeFilled.forEach(function(e){
          
 
 
+      }
+let a = 0;
+      for(let i = 0; i < ComparArr.length;i++){
+        
+        if( ComparArr[i] == "X" || ComparArr[i] == "O"){
+          a++;
+          if(a == 9){
+            Res.textContent = `Its a draw, click on the reset button to start again`;
+
+            gridCont.classList.add("avoid-point")
+         
+         
+          reset.addEventListener("click",function(){
+           ArrToBeFilled =   rst(gridCont,Res);
+           ComparArr = [1,2,3,4,5,6,7,8,9];
+           logicGame(ArrToBeFilled);
+      
+          })
+          }
+        }
+        else{
+           return;
+
+        }
       }
       console.log(typeof(ComparArr[0]));
     })
