@@ -115,6 +115,13 @@ nav h1 {
   padding-top: 0.6em;
   color: wheat;
   text-shadow: 2px 2px rgba(0, 0, 0, 0.336);
+  transition-duration: 200ms;
+  transition-timing-function: ease-in;
+}
+
+.transition-effect {
+  transition-duration: 300ms;
+  transition-timing-function: ease-in;
 }
 
 .plyDisp {
